@@ -1,0 +1,158 @@
+@import "portfolioTheme.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap");
+
+* {
+  font-family: "Noto Sans", sans-serif !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  margin: 0;
+  background-color: $theme-black;
+  color: #fff;
+}
+
+.flex-r-hc {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.flex-r-vc {
+  display: flex !important;
+  align-items: center !important;
+}
+.flex-r-h-around {
+  display: flex !important;
+  justify-content: space-around;
+}
+.flex-r-h-between-vc {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-col-hc-vc {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-hc-vs {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-col-hs-vc {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: flex-start;
+}
+.flex-col-hs-v-between {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.flex-r-hs {
+  display: flex !important;
+  justify-content: flex-start;
+}
+
+.flex-r-hs-vc {
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-r-hc-vc {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-r-he {
+  display: flex !important;
+  justify-content: flex-end;
+}
+.flex-r-he-vc {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center;
+}
+.flex-r-hsa-vc {
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: center;
+}
+.flex-r-hsb-vc {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+}
+.flex-r-hse-vc {
+  display: flex !important;
+  justify-content: space-evenly !important;
+  align-items: center;
+}
+.position-relative {
+  position: relative !important;
+}
+.just-hover:hover {
+  cursor: pointer;
+}
+
+.navbar {
+  /* From https://css.glass */
+  background: $theme-black;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.3px);
+  -webkit-backdrop-filter: blur(6.3px);
+  color: #fff;
+  padding: 20px 0px;
+  display: flex !important;
+  justify-content: space-between;
+  // align-content: flex-end;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+.nav-links {
+  font-size: 13px !important;
+  margin: 0 15px !important;
+  text-decoration: none;
+  color: $theme-grey-nav;
+  font-weight: 600 !important;
+}
+.nav-links-logo {
+  width: auto;
+  height: 35px;
+  text-decoration: none;
+}
+
+.light-blue-font {
+  color: $theme-blue;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.services-root-container {
+  background-color: $theme-grey;
+  display: flex;
+  justify-content: center;
+}
+.bungee-outline {
+  font-family: "Bungee Outline", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 40px;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: $theme-grey-600;
+}
