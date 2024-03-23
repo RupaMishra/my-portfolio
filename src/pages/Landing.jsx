@@ -1,3 +1,4 @@
+import Projects from "./Projects";
 import Services from "./Services";
 import TopLandingSection from "./TopLandingSection";
 
@@ -6,6 +7,7 @@ const Landing = () => {
     <>
       <TopLandingSection />
       <Services />
+      <Projects />
     </>
   );
 };
