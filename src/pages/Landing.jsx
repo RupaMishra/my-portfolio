@@ -10,7 +10,7 @@ const Landing = () => {
       <TopLandingSection />
       <Services />
       <Work />
-      {/* <Projects /> */}
+      <Projects />
       <ContactUs />
     </>
   );
