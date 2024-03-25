@@ -2,20 +2,20 @@
 
 import { Box } from "@mui/material";
 
-const CornerTopLeft = ({ style, grad1, grad2 }) => {
+const CornerBottomRight = ({ style, grad1, grad2 }) => {
   return (
     <Box sx={style}>
       <svg
         width="300"
         height="300"
-        data-name="corner-top-left"
+        data-name="corner-bottom-right"
         xmlns="http://www.w3.org/2000/svg"
         style={{ pointerEvents: "none" }}
-        data-inlinesvg=".inlineSvgFile-2"
+        data-inlinesvg=".inlineSvgFile-6"
       >
         <defs>
           <linearGradient
-            id="corner-top-left"
+            id="corner-bottom-right"
             x1="0%"
             y1="0%"
             x2="100%"
@@ -31,12 +31,12 @@ const CornerTopLeft = ({ style, grad1, grad2 }) => {
           </linearGradient>
         </defs>
         <path
-          fill="url('#corner-top-left')"
-          d="M8 0h292l-20 20H25a5 5 0 0 0-5 5v255L0 300V8a8 8 0 0 1 8-8Z"
+          fill="url('#corner-bottom-right')"
+          d="M292 300H0l20-20h255a5 5 0 0 0 5-5V20l20-20v292a8 8 0 0 1-8 8Z"
         ></path>
       </svg>
     </Box>
   );
 };
 
-export default CornerTopLeft;
+export default CornerBottomRight;

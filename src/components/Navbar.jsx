@@ -17,6 +17,7 @@ const Navbar = () => {
           </NavLink>
         </Grid>
         <Grid
+          item
           md={7}
           // sx={{
           //   display: "flex",
