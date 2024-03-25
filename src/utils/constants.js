@@ -1,3 +1,5 @@
+export const getDev = import.meta.env.VITE_DEVELOPER;
+
 export const NAV = [
   { label: "HOME" },
   { label: "ABOUT" },
