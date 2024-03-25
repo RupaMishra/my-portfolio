@@ -26,8 +26,12 @@ const Navbar = () => {
           // }}
         >
           <Box
-            sx={{ display: isBig ? "block" : "none", width: "100%" }}
-            className="flex-r-hse-vc"
+            sx={{
+              display: isBig ? "flex" : "none",
+              width: "100%",
+              justifyContent: "flex-end",
+              alignItems: "flex-end",
+            }}
           >
             {NAV.map((nav, index) => {
               const { label } = nav;
