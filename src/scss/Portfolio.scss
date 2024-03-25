@@ -154,6 +154,15 @@ body {
   display: flex;
   justify-content: center;
 }
+.projects-container {
+  background-color: #1d1d20;
+  // background-color: $theme-grey;
+  display: flex;
+  justify-content: center;
+  height: "max-content";
+  min-height: 600px;
+  // overflow: hidden;
+}
 .bungee-outline {
   font-family: "Bungee Outline", sans-serif !important;
   font-weight: 400 !important;
@@ -172,4 +181,57 @@ body {
   height: 1px;
   background-color: #3c8282;
   margin-top: 60px;
+}
+
+.vertical-divider {
+  min-height: 180px;
+  height: inherit;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  //   content: " ";
+  // width: 90px;
+  // height: 90px;
+  // background: linear-gradient(135deg, var(--grad-1) 0%, var(--grad-2) 50%, var(--grad-1) 100%);
+  // opacity: 1;
+  // border-top-left-radius: 8px;
+  // transition: all .3s ease-in-out;
+  // position: absolute;
+  // top: -2px;
+  // bottom: 0;
+  // left: -2px;
+}
+
+.gradient-tran {
+  // stop-color: var(--grad-1);
+  // stop-color: rgb(204, 105, 198);
+  transition: all 0.3s ease-in-out;
+}
+
+.icons {
+  transition: all 0.1s linear;
+}
+.icons:hover {
+  scale: 1.2;
+  color: #dbd8d8 !important;
+}
+.project-names {
+  z-index: 1;
+  color: #ccc;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  margin-left: 0;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.project-names span {
+  font-weight: 300;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  width: 100% !important;
+  border-image-slice: 1 !important;
+  transition: all 0.3s ease-in-out;
 }
