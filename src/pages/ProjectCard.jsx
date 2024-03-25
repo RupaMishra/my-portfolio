@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import project1 from "../assets/projects/project1.png";
 
@@ -7,7 +6,9 @@ const ProjectCard = () => {
     <Grid
       item
       lg={4}
+      md={6}
       sm={8}
+      xs={12}
       display={"flex"}
       flexDirection={"column"}
       justifyContent={"center"}

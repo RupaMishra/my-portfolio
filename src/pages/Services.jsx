@@ -25,7 +25,7 @@ const EachService = () => {
 const Services = () => {
   return (
     <section id="services">
-      <Grid container className="services-root-container">
+      <Grid container className="services-root-container" textAlign={"center"}>
         <Box sx={{ width: "60%", py: 5 }} className="flex-col-hc-vc">
           <Typography
             sx={{

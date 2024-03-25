@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import ProjectCard from "./ProjectCard";
 
@@ -10,19 +9,18 @@ const Work = () => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        margin: 8,
+        mt: 4,
       }}
     >
       <Grid
         lg={12}
-        sm={6}
         container
         display={"flex"}
         flexDirection={"column"}
         justifyContent={"center"}
         alignItems={"center"}
       >
-        <Grid item lg={8} sm={12}>
+        <Grid item sm={6} xs={8} textAlign={"center"}>
           <Typography variant="h4" textAlign={"center"}>
             My Work
           </Typography>
@@ -37,7 +35,7 @@ const Work = () => {
             rupamishraa2000@gmail.com
           </Typography>
         </Grid>
-        <Grid item lg={12} sm={12}>
+        <Grid item lg={12}>
           <Grid
             container
             lg={12}

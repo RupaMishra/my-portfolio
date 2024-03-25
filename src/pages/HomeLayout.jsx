@@ -6,7 +6,7 @@ import Footer from "./Footer";
 const HomeLayout = () => {
   return (
     <Box>
-      {/* <Navbar /> */}
+      <Navbar />
       <Outlet />
       <Footer />
     </Box>
