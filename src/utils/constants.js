@@ -19,6 +19,7 @@ export const Colors = {
   grey700: "#454f5b",
   greynav: "#4f4f4f",
   greytext: "#707070",
+  textField: "#212121",
 };
 
 export const projects = [

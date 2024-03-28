@@ -6,14 +6,12 @@ import TopLandingSection from "./TopLandingSection";
 import Work from "./Work";
 
 const Landing = () => {
-  console.log("developer", getDev);
-
   return (
     <>
       <TopLandingSection />
       <Services />
-      <Work />
-      <Projects />
+      {getDev == 50 && <Work />}
+      {getDev == 7 && <Projects />}
       <ContactUs />
     </>
   );

@@ -154,13 +154,17 @@ body {
   display: flex;
   justify-content: center;
 }
-.projects-container {
-  background-color: #1d1d20;
-  // background-color: $theme-grey;
+.contact-us-container {
+  background-color: $theme-black;
   display: flex;
   justify-content: center;
-  height: "max-content";
-  min-height: 600px;
+  padding: 50px 0;
+}
+.projects-container {
+  background-color: #1d1d20;
+  display: flex;
+  justify-content: center;
+  height: 100vh !important;
   // overflow: hidden;
 }
 .bungee-outline {
@@ -234,4 +238,8 @@ body {
   width: 100% !important;
   border-image-slice: 1 !important;
   transition: all 0.3s ease-in-out;
+}
+
+.just-hover:hover {
+  cursor: pointer;
 }

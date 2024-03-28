@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, Divider } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { Colors } from "../utils/constants";
 import { Icon } from "@iconify/react";
 const EachService = () => {

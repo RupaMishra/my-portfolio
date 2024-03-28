@@ -3,15 +3,8 @@ import logo from "../assets/images/logo.png";
 const Footer = () => {
   return (
     <Box className="services-root-container" sx={{ py: 5 }}>
-      <Grid container lg={8} py={5} justifyContent={"center"}>
-        <Grid
-          item
-          md={4}
-          sm={12}
-          xs={12}
-          sx={{ display: "flex" }}
-          className="flex-col-hc-vs"
-        >
+      <Grid container lg={8.5} py={5} justifyContent={"center"}>
+        <Grid item md={4} sm={12} xs={12} className="flex-col-hs-vs">
           <img src={logo} alt="logo" className="footer-logo" />
         </Grid>
         <Grid item lg={4} sm={12} xs={12} className="flex-col-hc-vs">
