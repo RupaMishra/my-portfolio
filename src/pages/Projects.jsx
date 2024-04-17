@@ -26,18 +26,26 @@ const Projects = () => {
   const [choosenIndex, setchoosenIndex] = useState(0);
 
   return (
-    <Grid container className="relative projects-container">
+    <Grid container className="relative projects-container" id="PROJECTS">
       <CornerTopLeft
-        style={{ position: "absolute", left: "40px", top: "0px" }}
+        style={{
+          position: "absolute",
+          left: { lg: "40px", md: "40px", xs: "0px" },
+          top: "0px",
+        }}
         grad1={projects[choosenIndex].color.grad1}
         grad2={projects[choosenIndex].color.grad2}
       />
-      <Grid container sx={{ position: "absolute", top: "60px", px: 8 }}>
+      <Grid container sx={{ my: 10, px: { lg: 8, md: 8, xs: 4 } }}>
         {/* logo icons and proj desc container */}
         <Grid
           item
           md={12}
-          sx={{ display: "flex", flexDirection: "column", px: 4 }}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            px: { lg: 4, md: 4, xs: 0 },
+          }}
         >
           {/* logo and git and mail container */}
           <Box
@@ -47,8 +55,8 @@ const Projects = () => {
               alignItems: "center",
             }}
           >
-            <img src={letterA} alt="initials" width="5%" />
-            <Box sx={{ pr: 5 }}>
+            <img src={letterA} alt="initials" width="40px" />
+            <Box sx={{ pr: { lg: 5, xs: 0 } }}>
               <Icon
                 icon="cib:gmail"
                 style={{
@@ -70,16 +78,60 @@ const Projects = () => {
             </Box>
           </Box>
           {/* projects and description  container*/}
-          <Grid container sx={{ px: 6 }} className="flex-r-h-between-vc">
-            {/* tried to use framer motion here */}
-            {/* <motion.div
-                style={{ width: "100%" }}
-                variants={variants}
-                initial="hidden"
-                animate="visible"
-              > */}
-
-            <Grid item md={7}>
+          <Grid
+            container
+            sx={{ px: { lg: 6, xs: 0 } }}
+            className="flex-r-h-between-vc"
+          >
+            {/* this is only for small screen top tabs for proj */}
+            <Grid
+              item
+              lg={12}
+              md={12}
+              xs={12}
+              sm={12}
+              sx={{
+                mt: 2,
+                ml: 1,
+                zIndex: "10",
+                display: {
+                  lg: "none",
+                  md: "none",
+                  sm: "flex",
+                  xs: "flex",
+                  flexWrap: "wrap",
+                },
+              }}
+            >
+              {projects.map((project, index) => {
+                return (
+                  <Box
+                    key={index}
+                    sx={{ mx: 1, my: 1 }}
+                    onClick={() => {
+                      setchoosenIndex(index);
+                    }}
+                  >
+                    <a
+                      //   href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-names"
+                    >
+                      <span
+                        style={{
+                          borderImage: `linear-gradient(90deg, ${projects[choosenIndex].color.grad1} 0%, ${projects[choosenIndex].color.grad2} 100%)`,
+                        }}
+                      >
+                        {project?.title}
+                      </span>
+                    </a>
+                  </Box>
+                );
+              })}
+            </Grid>
+            {/* this is desc of proj */}
+            <Grid item md={7} xs={12} sx={{ ml: { xs: 2 } }}>
               <Typography
                 sx={{
                   fontSize: "35px",
@@ -91,7 +143,10 @@ const Projects = () => {
                 {projects[choosenIndex].title}
               </Typography>
 
-              <Box sx={{ px: 4, height: "100%" }} className="relative">
+              <Box
+                sx={{ px: { lg: 4, md: 4, xs: 2 }, height: "100%" }}
+                className="relative"
+              >
                 <div
                   className="vertical-divider"
                   style={{
@@ -127,7 +182,14 @@ const Projects = () => {
             </Grid>
             {/* </motion.div> */}
 
-            <Grid item md={4}>
+            <Grid
+              item
+              md={4}
+              xs={12}
+              sx={{
+                display: { lg: "block", md: "block", sm: "none", xs: "none" },
+              }}
+            >
               <Typography
                 sx={{
                   fontSize: "30px",
@@ -180,13 +242,18 @@ const Projects = () => {
         <Grid
           item
           md={12}
-          sx={{ display: "flex", justifyContent: "flex-end", px: 4 }}
+          xs={12}
+          sx={{ display: "flex", justifyContent: "flex-end", px: 4, mt: 1 }}
         >
           <Typography>@2024 1234@gmail.com</Typography>
         </Grid>
       </Grid>
       <CornerBottomRight
-        style={{ position: "absolute", right: "40px", bottom: "-2px" }}
+        style={{
+          position: "absolute",
+          right: { lg: "40px", md: "40px", xs: "0px" },
+          bottom: "-2px",
+        }}
         grad1={projects[choosenIndex].color.grad1}
         grad2={projects[choosenIndex].color.grad2}
       />

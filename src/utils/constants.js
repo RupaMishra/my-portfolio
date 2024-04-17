@@ -5,7 +5,7 @@ export const NAV = [
   { label: "HOME" },
   { label: "ABOUT" },
   { label: "SERVICE" },
-  { label: "BLOG" },
+  { label: "PROJECTS" },
   { label: "CONTACT" },
 ];
 

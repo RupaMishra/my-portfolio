@@ -20,7 +20,7 @@ const ContactUs = () => {
   };
 
   return (
-    <Grid container className="contact-us-container">
+    <Grid container className="contact-us-container" id="CONTACT">
       <Box
         sx={{
           width: "70%",

@@ -5,6 +5,40 @@ import { NAV } from "../utils/constants";
 import useResponsive from "../hooks/useResponsive";
 const Navbar = () => {
   const isBig = useResponsive("up", "sm");
+
+  const handleScroll = (id) => {
+    if (id === "HOME") {
+      window.scrollTo({
+        top: document.getElementById("HOME").offsetTop - 75,
+        behavior: "smooth",
+      });
+    }
+    if (id === "ABOUT") {
+      window.scrollTo({
+        top: document.getElementById("HOME").offsetTop - 75,
+        behavior: "smooth",
+      });
+    }
+    if (id === "SERVICE") {
+      window.scrollTo({
+        top: document.getElementById("SERVICE").offsetTop - 75,
+        behavior: "smooth",
+      });
+    }
+    if (id === "PROJECTS") {
+      window.scrollTo({
+        top: document.getElementById("PROJECTS").offsetTop - 75,
+        behavior: "smooth",
+      });
+    }
+    if (id === "CONTACT") {
+      window.scrollTo({
+        top: document.getElementById("CONTACT").offsetTop - 75,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <Grid container className="navbar flex-r-hc">
       <Box
@@ -12,7 +46,7 @@ const Navbar = () => {
       >
         {/* <Grid item md={5} className="flex-r-hs-vc"> */}
         <Grid item md={5}>
-          <NavLink to="/" className="flex-r-vc">
+          <NavLink smooth to="/" className="flex-r-vc">
             <img src={logo} alt="Logo" className="nav-links-logo" />
           </NavLink>
         </Grid>
@@ -36,7 +70,11 @@ const Navbar = () => {
             {NAV.map((nav, index) => {
               const { label } = nav;
               return (
-                <NavLink key={index} className="nav-links">
+                <NavLink
+                  key={index}
+                  className="nav-links"
+                  onClick={handleScroll.bind(this, label)}
+                >
                   {label}
                 </NavLink>
               );

@@ -164,14 +164,16 @@ body {
   background-color: #1d1d20;
   display: flex;
   justify-content: center;
-  height: 100vh !important;
+  min-height: 600px !important;
+  height: 100vh;
+
   // overflow: hidden;
 }
 .bungee-outline {
   font-family: "Bungee Outline", sans-serif !important;
   font-weight: 400 !important;
   font-style: normal !important;
-  font-size: 24px;
+  font-size: 24px !important;
   margin-left: 18px;
 }
 .divider {
@@ -242,4 +244,11 @@ body {
 
 .just-hover:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 756px) {
+  .projects-container {
+    min-height: 800px !important;
+    height: 100vh;
+  }
 }

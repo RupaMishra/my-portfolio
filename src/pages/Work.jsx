@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard";
 const Work = () => {
   return (
     <Box
+      id="PROJECTS"
       sx={{
         display: "flex",
         justifyContent: "center",

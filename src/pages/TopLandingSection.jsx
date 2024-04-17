@@ -1,13 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Grid, Typography } from "@mui/material";
 import { Colors } from "../utils/constants";
-import bg from "../assets/images/bg.png";
+// import bg from "../assets/images/bg.png";
 import useResponsive from "../hooks/useResponsive";
 
 const TopLandingSection = () => {
   const isBig = useResponsive("up", "sm");
   return (
     <Grid
+      id="HOME"
       container
       lg={12}
       display="flex"
