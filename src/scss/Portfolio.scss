@@ -1,7 +1,7 @@
 @import "portfolioTheme.scss";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap");
-
+// @import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap");
 * {
   font-family: "Noto Sans", sans-serif !important;
 }
@@ -170,11 +170,13 @@ body {
   // overflow: hidden;
 }
 .bungee-outline {
-  font-family: "Bungee Outline", sans-serif !important;
+  // font-family: "Bungee Outline", sans-serif !important;
+  font-family: "Raleway Dots", sans-serif !important;
   font-weight: 400 !important;
   font-style: normal !important;
-  font-size: 24px !important;
+  font-size: 36px !important;
   margin-left: 18px;
+  letter-spacing: 2px !important;
 }
 .divider {
   width: 100%;
@@ -246,6 +248,46 @@ body {
   cursor: pointer;
 }
 
+.about-me-big {
+  position: absolute;
+  top: 13px;
+  left: -20px;
+  font-size: 7vw;
+  color: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+}
+.about-me-small {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0;
+}
+.about-me-info {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: 40px;
+}
+.list-items {
+  display: flex !important;
+  list-style: none;
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+.list-label {
+  font-weight: 600;
+  color: #fff;
+  width: 130px !important;
+  font-size: 19px;
+}
+.list-info {
+  width: calc(100% - 130px);
+  font-size: 19px;
+  font-weight: 400;
+  color: #999999;
+}
 @media screen and (max-width: 756px) {
   .projects-container {
     min-height: 800px !important;

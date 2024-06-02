@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import CornerTopLeft from "../assets/svg/CornerTopLeft";
 import CornerBottomRight from "../assets/svg/CornerBottomRight";
@@ -24,6 +24,11 @@ import SmallTopCorner from "../assets/svg/SmallTopCorner";
 
 const Projects = () => {
   const [choosenIndex, setchoosenIndex] = useState(0);
+
+  useEffect(() => {
+    var tempElem = document.getElementById("dessc");
+    tempElem.innerHTML = projects[choosenIndex].desc;
+  }, [choosenIndex]);
 
   return (
     <Grid container className="relative projects-container" id="PROJECTS">
@@ -154,15 +159,14 @@ const Projects = () => {
                   }}
                 ></div>
                 <Typography
+                  id="dessc"
                   sx={{
                     fontWeight: 300,
                     color: "#ccc",
                     fontSize: "18px",
                     lineHeight: "1.5",
                   }}
-                >
-                  {projects[choosenIndex].desc}
-                </Typography>
+                ></Typography>
                 {/* view site */}
                 <div style={{ marginTop: "20px" }}>
                   <a className="project-names">
@@ -245,7 +249,7 @@ const Projects = () => {
           xs={12}
           sx={{ display: "flex", justifyContent: "flex-end", px: 4, mt: 1 }}
         >
-          <Typography>@2024 1234@gmail.com</Typography>
+          <Typography>@2024 avinashranga8@gmail.com</Typography>
         </Grid>
       </Grid>
       <CornerBottomRight

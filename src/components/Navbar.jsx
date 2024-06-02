@@ -15,7 +15,7 @@ const Navbar = () => {
     }
     if (id === "ABOUT") {
       window.scrollTo({
-        top: document.getElementById("HOME").offsetTop - 75,
+        top: document.getElementById("ABOUT").offsetTop - 75,
         behavior: "smooth",
       });
     }

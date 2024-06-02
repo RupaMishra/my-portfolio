@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { Box, Grid, Typography } from "@mui/material";
-import { Colors } from "../utils/constants";
+import { Colors, SERVICES } from "../utils/constants";
 import { Icon } from "@iconify/react";
-const EachService = () => {
+const EachService = ({ eachData }) => {
   return (
     <Box
       sx={{
@@ -14,10 +15,10 @@ const EachService = () => {
       }}
     >
       <Icon
-        icon="charm:north-star"
-        style={{ fontSize: "30px", marginRight: 6 }}
+        icon={eachData.icon}
+        style={{ fontSize: "24px", marginRight: "18px" }}
       />
-      <Typography className="bungee-outline">PRODUCT DESIGN</Typography>
+      <Typography className="bungee-outline">{eachData.label}</Typography>
     </Box>
   );
 };
@@ -35,7 +36,7 @@ const Services = () => {
         >
           <Typography
             sx={{
-              fontSize: "14px",
+              fontSize: "24px",
               color: Colors.blue,
               fontWeight: 600,
               my: 1,
@@ -47,14 +48,14 @@ const Services = () => {
             Services I provide
           </Typography>
 
-          <EachService />
-          <div className="divider"></div>
-          <EachService />
-          <div className="divider"></div>
-          <EachService />
-          <div className="divider"></div>
-          <EachService />
-          <div className="divider"></div>
+          {SERVICES.map((service) => {
+            return (
+              <>
+                <EachService eachData={service} />
+                <div className="divider"></div>
+              </>
+            );
+          })}
         </Box>
       </Grid>
     </section>

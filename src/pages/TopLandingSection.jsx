@@ -1,11 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Grid, Typography } from "@mui/material";
-import { Colors } from "../utils/constants";
+import { Colors, getDev } from "../utils/constants";
 // import bg from "../assets/images/bg.png";
 import useResponsive from "../hooks/useResponsive";
 
 const TopLandingSection = () => {
   const isBig = useResponsive("up", "sm");
+
+  console.log("getDev", getDev);
   return (
     <Grid
       id="HOME"
@@ -16,37 +18,83 @@ const TopLandingSection = () => {
       alignItems={"center"}
       // sx={{ backgroundImage: `url(${bg})`, height: "80vh" }}
     >
-      <Grid
-        item
-        lg={5}
-        md={6}
-        sm={12}
-        display="flex"
-        justifyContent="center"
-        alignItems={"center"}
-        flexDirection={"column"}
-        my={12}
-      >
-        <Typography
-          sx={{
-            fontSize: isBig ? "70px" : "50px",
-            lineHeight: "75px",
-            fontWeight: 550,
-          }}
-          textAlign={"center"}
+      {getDev == 7 ? (
+        <Grid
+          item
+          lg={5}
+          md={6}
+          sm={12}
+          display="flex"
+          justifyContent="center"
+          alignItems={"center"}
+          flexDirection={"column"}
+          my={12}
+          mt={4}
         >
-          HELLO! <span className="light-blue-font">I'M</span> A <br />
-          WEB DESIGNER+ <span className="light-blue-font">DEVELOPER</span>
-        </Typography>
-        <Typography
-          sx={{ fontSize: "14px", color: Colors.greytext, width: "70%" }}
-          textAlign={"center"}
+          <Typography
+            sx={{
+              fontSize: isBig ? "70px" : "50px",
+              lineHeight: "85px",
+              fontWeight: 550,
+            }}
+            textAlign={"center"}
+          >
+            HELLO!{" "}
+            <span className="light-blue-font" style={{ marginBottom: "20px" }}>
+              I'M
+            </span>{" "}
+            A <br />
+            <span className="light-blue-font">SOFTWARE DEVELOPER</span>
+          </Typography>
+          <Typography
+            sx={{ fontSize: "16px", color: Colors.grey500, width: "70%" }}
+            textAlign={"center"}
+          >
+            With expertise in front-end and back-end development, proficient in
+            technologies like <br /> Javascript | React.js | Next.js | React
+            Native | Redux | Context API | Hooks | Material UI | Tailwind | HTML
+            | CSS | Node | Express , and databases like MongoDB
+          </Typography>
+        </Grid>
+      ) : (
+        <Grid
+          item
+          lg={5}
+          md={6}
+          sm={12}
+          display="flex"
+          justifyContent="center"
+          alignItems={"center"}
+          flexDirection={"column"}
+          my={12}
+          mt={4}
         >
-          Beautiful design has the power to capitivate audiences and drive
-          business growth. Specializing in creating stunning designs that
-          transfom business worldwide.
-        </Typography>
-      </Grid>
+          <Typography
+            sx={{
+              fontSize: isBig ? "70px" : "50px",
+              lineHeight: "85px",
+              fontWeight: 550,
+            }}
+            textAlign={"center"}
+          >
+            HELLO!{" "}
+            <span className="light-blue-font" style={{ marginBottom: "20px" }}>
+              I'M
+            </span>{" "}
+            A <br />
+            <span className="light-blue-font"> SOFTWARE DEVELOPER</span>
+          </Typography>
+          <Typography
+            sx={{ fontSize: "15px", color: Colors.greytext, width: "70%" }}
+            textAlign={"center"}
+          >
+            With expertise in front-end and back-end development, proficient in
+            technologies like <br /> Javascript | React.js | Next.js | React
+            Native | Redux | Context API | Hooks | Material UI | Tailwind | HTML
+            | CSS | Node | Express , and databases like MongoDB
+          </Typography>
+        </Grid>
+      )}
       {/* <Grid
         item
         lg={4}
